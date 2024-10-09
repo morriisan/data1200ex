@@ -1,0 +1,240 @@
+:root {
+    --primary-color: #0066cc;
+    --bg-color: #f0f0f0;
+    --text-color: #333;
+    --header-bg: #e0e0e0;
+    --border-color: #ddd;
+    --hover-bg: #d0d0d0;
+    --box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Header and Navigation */
+header {
+    background-color: var(--header-bg);
+    padding: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+nav ul li { margin: 0.5rem; }
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.main-content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.sidebar {
+    width: 300px;
+}
+
+/* Common Styles */
+h1 { text-align: center; margin-bottom: 30px; }
+
+.intro-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.info-box, .course {
+    background-color: #f9f9f9;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.info-box {
+    box-shadow: var(--box-shadow);
+}
+
+.info-box h2, .info-box h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.info-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.info-box li, .course p {
+    margin-bottom: 10px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover { text-decoration: underline; }
+
+/* Dropdown Sections */
+.dropdown-sections {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.dropdown-item {
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 250px;
+}
+
+.dropdown-sections details, .semester-dropdown {
+    background-color: #f9f9f9;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-sections summary, .semester-dropdown summary {
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: var(--header-bg);
+}
+
+.dropdown-sections summary:hover, .semester-dropdown summary:hover {
+    background-color: var(--hover-bg);
+}
+
+.dropdown-sections details[open] summary, .semester-dropdown[open] summary {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dropdown-sections details p, .dropdown-content {
+    padding: 15px;
+    margin: 0;
+}
+
+/* Semester Plan */
+.semester-plan {
+    margin-bottom: 40px;
+}
+
+.semester-plan h2 {
+    background-color: var(--bg-color);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.course {
+    position: relative;
+    flex: 1 1 calc(25% - 20px);
+    min-width: 200px;
+}
+
+.course h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.star-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .content-wrapper, .full-width-section {
+        flex-direction: column;
+    }
+    
+    .main-content {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .sidebar {
+        width: 100%;
+    }
+    
+    .dropdown-content .course {
+        flex: 0 0 calc(33.333% - 13.333px);
+        max-width: calc(33.333% - 13.333px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li { margin: 0.25rem 0; }
+
+    main { padding: 1rem; }
+    
+    .course, .dropdown-content .course {
+        flex: 0 0 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .course, .dropdown-content .course {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
