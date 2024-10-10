@@ -20,7 +20,9 @@
     <main>
         <h1>Matematisk modellering og datavitenskap - ingeniør</h1>
         
+        <!-- Main content and sidebar -->
         <div class="content-wrapper">
+            
             <div class="main-content">
                 <p class="intro-text">Få innsikt i matematiske modeller og datadrevne metoder som kan løse mange praktiske og samfunnsnyttige oppgaver.</p>
                 
@@ -71,6 +73,7 @@
                 </aside>
             </div>
         </div>
+        
         <div class="full-width-section">
             <h2>Hva lærer du?</h2>
             <p>Bachelor i matematisk modellering og datavitenskap kobler sammen matematikk, informatikk, fysikk og statistikk.</p>
@@ -78,7 +81,7 @@
             <p>Det første studieåret har du emner i blant annet matematikk, programmering, fysikk og kjemi for å få en felles forståelse av tematikken.</p>
             <p>Det siste semesteret skriver du en bacheloroppgave tett knyttet til problemstillinger i arbeidslivet.</p>
             <p>Første året velger du hvilken av disse spesialiseringene du vil ta.</p>
-
+            <!-- Dropdown items -->
             <div class="dropdown-sections">
                 <div class="dropdown-item">
                     <details>
@@ -105,420 +108,473 @@
             </div>
         </div>
         
-        <div class="full-width-section semester-plan">
-            <h2>1. studieår</h2>
-            
-            <div class="semester">
-                <h3>1. semester</h3>
-                <div class="courses">
-                    <div class="course">
-                        <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DAPE1300/2024/H%C3%98ST" target="_blank">Diskret matematikk</a></h4>       
-                        <p>DAPE1300</p>
-                        <p>10 stp.</p>
-                    </div>
-                    <div class="course">
-                        <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DAPE1400/2024/H%C3%98ST" target="_blank">Programmering</a></h4>
-                        <p>DAPE1400</p>
-                        <p>10 stp.</p>
-                    </div>
-                    <div class="course">
-                        <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATA1100/2024/H%C3%98ST" target="_blank">Teknologi og samfunn for programmerere</a></h4>
-                        <p>DATA1100</p>
-                        <p>5 stp.</p>
-                    </div>
-                    <div class="course">
-                        <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO1100/2024/H%C3%98ST" target="_blank">Innføring i modeller og beregninger</a></h4>
-                        <p>MAMO1100</p>
-                        <p>5 stp.</p>
+
+        <!-- Years dropdowns -->
+        <section>
+            <div class="full-width-section">
+                <div class="heading-with-legend">
+                    <h2>Studiets oppbygging</h2>
+                    <div class="legend">
+                        <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon2">
+                        <span>Valgfritt emne</span>
                     </div>
                 </div>
             </div>
-
-            <div class="semester">
-                <h3>2. semester</h3>
-                <div class="courses">
-                    <div class="course">
-                        <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DAFE1000/2024/H%C3%98ST" target="_blank">Matematikk 1000</a></h4>
-                        <p>DAFE1000</p>
-                        <p>10 stp.</p>
-                    </div>
-                    <div class="course">
-                        <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DAPE2101/2024/H%C3%98ST" target="_blank">Fysikk og kjemi</a></h4>
-                        <p>DAPE2101</p>
-                        <p>10 stp.</p>
-                    </div>
-                    <div class="course">
-                        <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATA1500/2024/H%C3%98ST" target="_blank">Databaser</a></h4>
-                        <p>DATA1500</p>
-                        <p>10 stp.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="full-width-section semester-plan">
-            <h2>2. studieår</h2>
-            <div class="semester">
-                <h3>3. semester</h3>
-                <div class="courses">
-                    <div class="course">
-                        <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DAPE2000/2024/H%C3%98ST" target="_blank">Matematikk 2000 med statistikk</a></h4>
-                        <p>DAFE2000</p>
-                        <p>10 stp.</p>
-                    </div>
-                    <div class="course">
-                        <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO2100/2024/H%C3%98ST" target="_blank">Moderne fysikk</a></h4>
-                        <p>MAMO2100</p>
-                        <p>10 stp.</p>
-                    </div>
-                </div>
-                <details class="semester-dropdown">
-                    <summary>Emnegruppe: Matematikk og fysikk</summary>
+            <!-- Year1 dropdowns -->
+            <div class="full-width-section semester-plan">
+                <details class="year-dropdown">
+                    <summary>1. studieår</summary>
                     <div class="dropdown-content">
-                        <div class="courses">
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO2300/2024/H%C3%98ST" target="_blank">Lineær algebra og introduksjon til gruppeteori</a></h4>
-                                <p>MAMO2300</p>
-                                <p>10 stp.</p>
+                        <!-- semester1 dropdowns -->
+                        <div class="semester">
+                            <h3>1. semester</h3>    
+                            <!-- Obligatoriske emner -->
+                            <div class="courses">
+                                <div class="course">
+                                    <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DAPE1300/2024/H%C3%98ST" target="_blank">Diskret matematikk</a></h4>       
+                                    <p>DAPE1300</p>
+                                    <p>10 stp.</p>
+                                </div>
+                                <div class="course">
+                                    <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DAPE1400/2024/H%C3%98ST" target="_blank">Programmering</a></h4>
+                                    <p>DAPE1400</p>
+                                    <p>10 stp.</p>
+                                </div>
+                                <div class="course">
+                                    <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATA1100/2024/H%C3%98ST" target="_blank">Teknologi og samfunn for programmerere</a></h4>
+                                    <p>DATA1100</p>
+                                    <p>5 stp.</p>
+                                </div>
+                                <div class="course">
+                                    <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO1100/2024/H%C3%98ST" target="_blank">Innføring i modeller og beregninger</a></h4>
+                                    <p>MAMO1100</p>
+                                    <p>5 stp.</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </details>
-                <details class="semester-dropdown">
-                    <summary>Emnegruppe: Statistiske og datadrevne metoder</summary>
-                    <div class="dropdown-content">
-                        <div class="courses">
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATS2300/2024/H%C3%98ST" target="_blank">Algoritmer og datastrukturer</a></h4>
-                                <p>DATS2300</p>
-                                <p>10 stp.</p>
-                            </div>
-                        </div>
-                    </div>
-                </details>
-
-                <details class="semester-dropdown">
-                    <summary>Emnegruppe: Vitenskapelige beregninger</summary>
-                    <div class="dropdown-content">
-                        <div class="courses">
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATS2300/2024/H%C3%98ST" target="_blank">Algoritmer og datastrukturer</a></h4>
-                                <p>DAVE2100</p>
-                                <p>10 stp.</p>
+                        <!-- semester2 dropdowns -->
+                        <div class="semester">
+                            <h3>2. semester</h3>
+                            <!-- Obligatoriske emner -->
+                            <div class="courses">
+                                <div class="course">
+                                    <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DAFE1000/2024/H%C3%98ST" target="_blank">Matematikk 1000</a></h4>
+                                    <p>DAFE1000</p>
+                                    <p>10 stp.</p>
+                                </div>
+                                <div class="course">
+                                    <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DAPE2101/2024/H%C3%98ST" target="_blank">Fysikk og kjemi</a></h4>
+                                    <p>DAPE2101</p>
+                                    <p>10 stp.</p>
+                                </div>
+                                <div class="course">
+                                    <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATA1500/2024/H%C3%98ST" target="_blank">Databaser</a></h4>
+                                    <p>DATA1500</p>
+                                    <p>10 stp.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </details>
             </div>
 
-            <div class="semester">
-                <h3>4. semester</h3>
-                <div class="courses">
-                    <div class="course">
-                        <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DAVE3705/2024/H%C3%98ST" target="_blank">Matematikk 4000</a></h4>
-                        <p>DAVE3705</p>
-                        <p>10 stp.</p>
-                    </div>
-                </div>
-                <details class="semester-dropdown">
-                    <summary>Emnegruppe: Matematikk og fysikk</summary>
+            <!-- Year2 dropdowns -->
+            <div class="full-width-section semester-plan">
+                <details class="year-dropdown">
+                    <summary>2. studieår</summary>
                     <div class="dropdown-content">
-                        <div class="courses">
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO2400/2024/H%C3%98ST" target="_blank">Termodynamikk og statistisk fysikk</a></h4>
-                                <p>MAMO2400</p>
-                                <p>10 stp.</p>
+                        <!-- semester3 dropdowns -->
+                        <div class="semester">
+                            <h3>3. semester</h3>
+                            <!-- Obligatoriske emner -->
+                            <div class="courses">
+                                <div class="course">
+                                    <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DAPE2000/2024/H%C3%98ST" target="_blank">Matematikk 2000 med statistikk</a></h4>
+                                    <p>DAFE2000</p>
+                                    <p>10 stp.</p>
+                                </div>
+                                <div class="course">
+                                    <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO2100/2024/H%C3%98ST" target="_blank">Moderne fysikk</a></h4>
+                                    <p>MAMO2100</p>
+                                    <p>10 stp.</p>
+                                </div>
                             </div>
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO2500/2024/H%C3%98ST" target="_blank">Symmetrier og algebraiske strukturer</a></h4>
-                                <p>MAMO2500</p>
-                                <p>10 stp.</p>
-                            </div>
+                            <!-- Emnegruppe: Matematikk og fysikk -->
+                            <details class="semester-dropdown">
+                                <summary>Emnegruppe: Matematikk og fysikk</summary>
+                                <div class="dropdown-content">
+                                    <div class="courses">
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO2300/2024/H%C3%98ST" target="_blank">Lineær algebra og introduksjon til gruppeteori</a></h4>
+                                            <p>MAMO2300</p>
+                                            <p>10 stp.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+
+                            <!-- Emnegruppe: Statistiske og datadrevne metoder -->
+                            <details class="semester-dropdown">
+                                <summary>Emnegruppe: Statistiske og datadrevne metoder</summary>
+                                <div class="dropdown-content">
+                                    <div class="courses">
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATS2300/2024/H%C3%98ST" target="_blank">Algoritmer og datastrukturer</a></h4>
+                                            <p>DATS2300</p>
+                                            <p>10 stp.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+
+                            <!-- Emnegruppe: Vitenskapelige beregninger -->
+                            <details class="semester-dropdown">
+                                <summary>Emnegruppe: Vitenskapelige beregninger</summary>
+                                <div class="dropdown-content">
+                                    <div class="courses">
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATS2300/2024/H%C3%98ST" target="_blank">Algoritmer og datastrukturer</a></h4>
+                                            <p>DAVE2100</p>
+                                            <p>10 stp.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
                         </div>
-                    </div>
-                </details>
-
-                <details class="semester-dropdown">
-                    <summary>Emnegruppe: Statistiske og datadrevne metoder</summary>
-                    <div class="dropdown-content">
-                        <div class="courses">
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO3100/2024/H%C3%98ST" target="_blank">Statistisk analyse</a></h4>
-                                <p>MAMO3100</p>
-                                <p>10 stp.</p>
+                        <!-- semester4 dropdowns -->
+                        <div class="semester">
+                            <h3>4. semester</h3>
+                            <!-- Obligatoriske emner -->
+                            <div class="courses">
+                                <div class="course">
+                                    <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DAVE3705/2024/H%C3%98ST" target="_blank">Matematikk 4000</a></h4>
+                                    <p>DAVE3705</p>
+                                    <p>10 stp.</p>
+                                </div>
                             </div>
 
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/ADSE3200/2024/H%C3%98ST" target="_blank">Visualisering</a></h4>
-                                <p>ADSE3200</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
-                            </div>
+                            <!-- Emnegruppe: Matematikk og fysikk -->
+                            <details class="semester-dropdown">
+                                <summary>Emnegruppe: Matematikk og fysikk</summary>
+                                <div class="dropdown-content">
+                                    <div class="courses">
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO2400/2024/H%C3%98ST" target="_blank">Termodynamikk og statistisk fysikk</a></h4>
+                                            <p>MAMO2400</p>
+                                            <p>10 stp.</p>
+                                        </div>
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO2500/2024/H%C3%98ST" target="_blank">Symmetrier og algebraiske strukturer</a></h4>
+                                            <p>MAMO2500</p>
+                                            <p>10 stp.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
 
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO2200/2024/H%C3%98ST" target="_blank">Avansert modellering og beregninger</a></h4>
-                                <p>MAMO2200</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
-                            </div>
-                        </div>
-                    </div>
-                </details>
+                            <!-- Emnegruppe: Statistiske og datadrevne metoder -->
+                            <details class="semester-dropdown">
+                                <summary>Emnegruppe: Statistiske og datadrevne metoder</summary>
+                                <div class="dropdown-content">
+                                    <div class="courses">
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO3100/2024/H%C3%98ST" target="_blank">Statistisk analyse</a></h4>
+                                            <p>MAMO3100</p>
+                                            <p>10 stp.</p>
+                                        </div>
+    
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/ADSE3200/2024/H%C3%98ST" target="_blank">Visualisering</a></h4>
+                                            <p>ADSE3200</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+    
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO2200/2024/H%C3%98ST" target="_blank">Avansert modellering og beregninger</a></h4>
+                                            <p>MAMO2200</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
 
-                <details class="semester-dropdown">
-                    <summary>Emnegruppe: Vitenskapelige beregninger</summary>
-                    <div class="dropdown-content">
-                        <div class="courses">
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DAVE3606/2024/H%C3%98ST" target="_blank">Ressurseffektive programmer</a></h4>
-                                <p>DAVE3606</p>
-                                <p>10 stp.</p>
-                            </div>
-
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO2200/2024/H%C3%98ST" target="_blank">Avansert modellering og beregninger</a></h4>
-                                <p>MAMO2200</p>
-                                <p>10 stp.</p>
-                            </div>
-                        </div>
-                    </div>
-                </details>
-                
-            </div>
-        </div>
-
-        <div class="full-width-section semester-plan">
-            <h2>3. studieår</h2>
-            <div class="semester">
-                <h3>5. semester</h3>
-                <div class="courses">
-                    <div class="course">
-                        <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DAVE3700/2024/H%C3%98ST" target="_blank">Matematikk 3000</a></h4>
-                        <p>DAVE3700</p>
-                        <p>10 stp.</p>
-                    </div>
-                </div>
-                <details class="semester-dropdown">
-                    <summary>Emnegruppe: Matematikk og fysikk</summary>
-                    <div class="dropdown-content">
-                        <div class="courses">
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO3300/2024/H%C3%98ST" target="_blank">Reell analyse</a></h4>
-                                <p>MAMO3300</p>
-                                <p>10 stp.</p>
-                            </div>
-
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATA3730/2024/H%C3%98ST" target="_blank">Introduksjon til IT-forskning</a></h4>
-                                <p>DATA3730</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
-                            </div>
-
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATA3800/2024/H%C3%98ST" target="_blank">Introduction to Data Science with Scripting</a></h4>
-                                <p>DATA3800</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
-                            </div>
-
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/ITPE3100/2024/H%C3%98ST" target="_blank">Datasikkerhet</a></h4>
-                                <p>ITPE3100</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
-                            </div>
-
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO3200/2024/H%C3%98ST" target="_blank">Simulering og visualisering</a></h4>
-                                <p>MAMO3200</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
-                            </div>
-                        </div>
-                    </div>
-                </details>
-
-                <details class="semester-dropdown">
-                    <summary>Emnegruppe: Statistiske og datadrevne metoder</summary>
-                    <div class="dropdown-content">
-                        <div class="courses">
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DAVE3625/2024/H%C3%98ST" target="_blank">Introduksjon til Kunstig Intelligens</a></h4>
-                                <p>DAVE3625</p>
-                                <p>10 stp.</p>
-                            </div>
-
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATA3730/2024/H%C3%98ST" target="_blank">Introduksjon til IT-forskning</a></h4>
-                                <p>DATA3730</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
-                            </div>
-
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATA3750/2024/H%C3%98ST" target="_blank">Anvendt kunstig intelligens og data science prosjekt</a></h4>
-                                <p>DATA3750</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
-                            </div>
-
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/ITPE3100/2024/H%C3%98ST" target="_blank">Datasikkerhet</a></h4>
-                                <p>ITPE3100</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
-                            </div>
-
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO3200/2024/H%C3%98ST" target="_blank">Simulering og visualisering</a></h4>
-                                <p>MAMO3200</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
-                            </div>
-                        </div>
-                    </div>
-                </details>
-
-                <details class="semester-dropdown">
-                    <summary>Emnegruppe: Vitenskapelige beregninger</summary>
-                    <div class="dropdown-content">
-                        <div class="courses">
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO3200/2024/H%C3%98ST" target="_blank">Simulering og visualisering</a></h4>
-                                <p>MAMO3200</p>
-                                <p>10 stp.</p>
-                            </div>
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATA3730/2024/H%C3%98ST" target="_blank">Introduksjon til IT-forskning</a></h4>
-                                <p>DATA3730</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
-                            </div>
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/ITPE3100/2024/H%C3%98ST" target="_blank">Datasikkerhet</a></h4>
-                                <p>ITPE3100</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
-                            </div>
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO2300/2024/H%C3%98ST" target="_blank">Lineær algebra og introduksjon til gruppeteori</a></h4>
-                                <p>MAMO2300</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
-                            </div>
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO3300/2024/H%C3%98ST" target="_blank">Reell analyse</a></h4>
-                                <p>MAMO3300</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
-                            </div>
+                            <!-- Emnegruppe: Vitenskapelige beregninger -->
+                            <details class="semester-dropdown">
+                                <summary>Emnegruppe: Vitenskapelige beregninger</summary>
+                                <div class="dropdown-content">
+                                    <div class="courses">
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DAVE3606/2024/H%C3%98ST" target="_blank">Ressurseffektive programmer</a></h4>
+                                            <p>DAVE3606</p>
+                                            <p>10 stp.</p>
+                                        </div>
+    
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO2200/2024/H%C3%98ST" target="_blank">Avansert modellering og beregninger</a></h4>
+                                            <p>MAMO2200</p>
+                                            <p>10 stp.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+                            
                         </div>
                     </div>
                 </details>
             </div>
 
-            <div class="semester">
-                <h3>6. semester</h3>
-                <div class="courses">
-                    <div class="course">
-                        <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATA3900/2024/H%C3%98ST" target="_blank">Bacheloroppgave</a></h4>
-                        <p>DATA3900</p>
-                        <p>20 stp.</p>
-                    </div>
-                </div>
-                <details class="semester-dropdown">
-                    <summary>Emnegruppe: Matematikk og fysikk</summary>
+            <!-- Year3 dropdowns -->
+            <div class="full-width-section semester-plan">
+                <details class="year-dropdown">
+                    <summary>3. studieår</summary>
                     <div class="dropdown-content">
-                        <div class="courses">
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/ADTS2310/2024/H%C3%98ST" target="_blank">Testing av programvare</a></h4>
-                                <p>ADTS2310</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                        <!-- semester5 dropdowns -->
+                        <div class="semester">
+                            <h3>5. semester</h3>
+                            <!-- Obligatoriske emner -->
+                            <div class="courses">
+                                <div class="course">
+                                    <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DAVE3700/2024/H%C3%98ST" target="_blank">Matematikk 3000</a></h4>
+                                    <p>DAVE3700</p>
+                                    <p>10 stp.</p>
+                                </div>
                             </div>
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATA2410/2024/H%C3%98ST" target="_blank">Datanettverk og skytjenester</a></h4>
-                                <p>DATA2410</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
-                            </div>
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DAVE3606/2024/H%C3%98ST" target="_blank">Ressurseffektive programmer</a></h4>
-                                <p>DAVE3606</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
-                            </div>
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO2200/2024/H%C3%98ST" target="_blank">Avansert modellering og beregninger</a></h4>
-                                <p>MAMO2200</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
-                            </div>
-                        </div>
-                    </div>
-                </details>
+                            <!-- Emnegruppe: Matematikk og fysikk -->
+                            <details class="semester-dropdown">
+                                <summary>Emnegruppe: Matematikk og fysikk</summary>
+                                <div class="dropdown-content">
+                                    <div class="courses">
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO3300/2024/H%C3%98ST" target="_blank">Reell analyse</a></h4>
+                                            <p>MAMO3300</p>
+                                            <p>10 stp.</p>
+                                        </div>
+    
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATA3730/2024/H%C3%98ST" target="_blank">Introduksjon til IT-forskning</a></h4>
+                                            <p>DATA3730</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+    
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATA3800/2024/H%C3%98ST" target="_blank">Introduction to Data Science with Scripting</a></h4>
+                                            <p>DATA3800</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+    
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/ITPE3100/2024/H%C3%98ST" target="_blank">Datasikkerhet</a></h4>
+                                            <p>ITPE3100</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+    
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO3200/2024/H%C3%98ST" target="_blank">Simulering og visualisering</a></h4>
+                                            <p>MAMO3200</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
 
-                <details class="semester-dropdown">
-                    <summary>Emnegruppe: Statistiske og datadrevne metoder</summary>
-                    <div class="dropdown-content">
-                        <div class="courses">
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/ADTS2310/2024/H%C3%98ST" target="_blank">Testing av programvare</a></h4>
-                                <p>ADTS2310</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
-                            </div>
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATA2410/2024/H%C3%98ST" target="_blank">Datanettverk og skytjenester</a></h4>
-                                <p>DATA2410</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
-                            </div>
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DAVE3606/2024/H%C3%98ST" target="_blank">Ressurseffektive programmer</a></h4>
-                                <p>DAVE3606</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
-                            </div>
-                        </div>
-                    </div>
-                </details>
+                            <!-- Emnegruppe: Statistiske og datadrevne metoder -->
+                            <details class="semester-dropdown">
+                                <summary>Emnegruppe: Statistiske og datadrevne metoder</summary>
+                                <div class="dropdown-content">
+                                    <div class="courses">
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DAVE3625/2024/H%C3%98ST" target="_blank">Introduksjon til Kunstig Intelligens</a></h4>
+                                            <p>DAVE3625</p>
+                                            <p>10 stp.</p>
+                                        </div>
+    
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATA3730/2024/H%C3%98ST" target="_blank">Introduksjon til IT-forskning</a></h4>
+                                            <p>DATA3730</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+    
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATA3750/2024/H%C3%98ST" target="_blank">Anvendt kunstig intelligens og data science prosjekt</a></h4>
+                                            <p>DATA3750</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+    
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/ITPE3100/2024/H%C3%98ST" target="_blank">Datasikkerhet</a></h4>
+                                            <p>ITPE3100</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+    
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO3200/2024/H%C3%98ST" target="_blank">Simulering og visualisering</a></h4>
+                                            <p>MAMO3200</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
 
-                <details class="semester-dropdown">
-                    <summary>Emnegruppe: Vitenskapelige beregninger</summary>
-                    <div class="dropdown-content">
-                        <div class="courses">
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/ADSE3200/2024/H%C3%98ST" target="_blank">Visualisering</a></h4>
-                                <p>ADSE3200</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                            <!-- Emnegruppe: Vitenskapelige beregninger -->
+                            <details class="semester-dropdown">
+                                <summary>Emnegruppe: Vitenskapelige beregninger</summary>
+                                <div class="dropdown-content">
+                                    <div class="courses">
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO3200/2024/H%C3%98ST" target="_blank">Simulering og visualisering</a></h4>
+                                            <p>MAMO3200</p>
+                                            <p>10 stp.</p>
+                                        </div>
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATA3730/2024/H%C3%98ST" target="_blank">Introduksjon til IT-forskning</a></h4>
+                                            <p>DATA3730</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/ITPE3100/2024/H%C3%98ST" target="_blank">Datasikkerhet</a></h4>
+                                            <p>ITPE3100</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO2300/2024/H%C3%98ST" target="_blank">Lineær algebra og introduksjon til gruppeteori</a></h4>
+                                            <p>MAMO2300</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO3300/2024/H%C3%98ST" target="_blank">Reell analyse</a></h4>
+                                            <p>MAMO3300</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+                        </div>
+
+                        <!-- semester6 dropdowns -->
+                        <div class="semester">
+                            <h3>6. semester</h3>
+                            <!-- Obligatoriske emner -->
+                            <div class="courses">
+                                <div class="course">
+                                    <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATA3900/2024/H%C3%98ST" target="_blank">Bacheloroppgave</a></h4>
+                                    <p>DATA3900</p>
+                                    <p>20 stp.</p>
+                                </div>
                             </div>
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/ADTS2310/2024/H%C3%98ST" target="_blank">Testing av programvare</a></h4>
-                                <p>ADTS2310</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
-                            </div>
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATA2410/2024/H%C3%98ST" target="_blank">Datanettverk og skytjenester</a></h4>
-                                <p>DATA2410</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
-                            </div>
-                            <div class="course">
-                                <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO2500/2024/H%C3%98ST" target="_blank">Symmetrier og algebraiske strukturer</a></h4>
-                                <p>MAMO2500</p>
-                                <p>10 stp.</p>
-                                <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
-                            </div>
+
+                            <!-- Emnegruppe: Matematikk og fysikk -->
+                            <details class="semester-dropdown">
+                                <summary>Emnegruppe: Matematikk og fysikk</summary>
+                                <div class="dropdown-content">
+                                    <div class="courses">
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/ADTS2310/2024/H%C3%98ST" target="_blank">Testing av programvare</a></h4>
+                                            <p>ADTS2310</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATA2410/2024/H%C3%98ST" target="_blank">Datanettverk og skytjenester</a></h4>
+                                            <p>DATA2410</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DAVE3606/2024/H%C3%98ST" target="_blank">Ressurseffektive programmer</a></h4>
+                                            <p>DAVE3606</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO2200/2024/H%C3%98ST" target="_blank">Avansert modellering og beregninger</a></h4>
+                                            <p>MAMO2200</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+                                    </div>
+                                </div>
+                                </details>
+
+                            <!-- Emnegruppe: Statistiske og datadrevne metoder -->
+                            <details class="semester-dropdown">
+                                <summary>Emnegruppe: Statistiske og datadrevne metoder</summary>
+                                <div class="dropdown-content">
+                                    <div class="courses">
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/ADTS2310/2024/H%C3%98ST" target="_blank">Testing av programvare</a></h4>
+                                            <p>ADTS2310</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATA2410/2024/H%C3%98ST" target="_blank">Datanettverk og skytjenester</a></h4>
+                                            <p>DATA2410</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DAVE3606/2024/H%C3%98ST" target="_blank">Ressurseffektive programmer</a></h4>
+                                            <p>DAVE3606</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+
+                            <!-- Emnegruppe: Vitenskapelige beregninger --> 
+                            <details class="semester-dropdown">
+                                <summary>Emnegruppe: Vitenskapelige beregninger</summary>
+                                <div class="dropdown-content">
+                                    <div class="courses">
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/ADSE3200/2024/H%C3%98ST" target="_blank">Visualisering</a></h4>
+                                            <p>ADSE3200</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/ADTS2310/2024/H%C3%98ST" target="_blank">Testing av programvare</a></h4>
+                                            <p>ADTS2310</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/DATA2410/2024/H%C3%98ST" target="_blank">Datanettverk og skytjenester</a></h4>
+                                            <p>DATA2410</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+                                        <div class="course">
+                                            <h4><a href="https://student.oslomet.no/studier/-/studieinfo/emne/MAMO2500/2024/H%C3%98ST" target="_blank">Symmetrier og algebraiske strukturer</a></h4>
+                                            <p>MAMO2500</p>
+                                            <p>10 stp.</p>
+                                            <img src="./star-small-svgrepo-com.png" alt="Star" class="star-icon">
+                                        </div>
+                                    </div>
+                                </div>
+                            </details>
+                            
                         </div>
                     </div>
                 </details>
-                
             </div>
-        </div>
+        </section>
+
     </main>
 
     <footer>
