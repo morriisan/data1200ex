@@ -1,4 +1,4 @@
-/* Root variables */
+/* CSS Variables for consistent styling across the site */
 :root {
     --primary-color: #2c3e50;
     --bg-color: #ffffff;
@@ -7,12 +7,24 @@
     --border-color: #eeeeee;
     --hover-bg: #a4a4a4;
     --box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    --nav-bg: #052351e9;
+    --card-bg: #052351e2;
+    --light-blue: #bce0ef;
+    --transition-base: 0.3s ease;
+    --card-radius: 8px;
+    --card-padding: 1.5rem;
+    --mobile-padding: 1.2rem;
+    --space-lg: 20px;
+    --space-md: 10px;
+    --space-sm: 5px;
+    --font-sm: 0.9rem;
 }
 
-/* Global styles */
+/* Basic reset for all elements */
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
+/* Base styles for the body */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -21,13 +33,15 @@ body {
     color: var(--text-color);
 }
 
-h1, h2, h3, h4{
+/* Default heading styles */
+h1, h2, h3, h4 {
     color: var(--primary-color);
     font-weight: 600;
     line-height: 1.3;
     margin-bottom: 1rem;
 }
 
+/* Individual heading sizes */
 h1 { font-size: 2.5rem; text-align: center; margin-bottom: 30px; }
 h2 { font-size: 2rem; }
 h3 { font-size: 1.75rem; }
@@ -35,6 +49,7 @@ h4 { font-size: 1.5rem; }
 h5 { font-size: 1.25rem; }
 h6 { font-size: 1rem; }
 
+/* Paragraph and text styles */
 p {
     font-size: 1.1rem;
     margin-bottom: 1.2rem;
@@ -45,6 +60,7 @@ strong {
     font-weight: 600;
 }
 
+/* Basic link styles */
 a {
     color: inherit;
     text-decoration: underline;
@@ -52,19 +68,20 @@ a {
 
 a:hover { text-decoration: underline; }
 
-/* Header and Navigation */
+/* Fixed header at top of page */
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #052351e9;
+    background-color: var(--nav-bg);
     backdrop-filter: blur(5px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow);
     padding: 0.5rem;
     z-index: 2;
 }
 
+/* Navigation menu layout */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -73,18 +90,22 @@ nav ul {
     justify-content: space-around;
 }
 
-nav ul li { margin: 0.5rem; }
+nav ul li { 
+    margin: 0.5rem; 
+}
 
+/* Navigation link styles with hover effect */
 nav ul li a {
     text-decoration: none;
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 5px;
-    transition: all 0.3s ease;
+    transition: all var(--transition-base);
     font-size: 1.3em;
     position: relative;
 }
 
+/* Navigation link underline animation */
 nav ul li a::after {
     content: '';
     position: absolute;
@@ -92,13 +113,12 @@ nav ul li a::after {
     height: 2px;
     bottom: 0;
     left: 50%;
-    background-color: #ffffff;
-    transition: all 0.3s ease;
+    background-color: white;
+    transition: all var(--transition-base);
     transform: translateX(-50%);
 }
 
 nav ul li a:hover::after {
-    text-decoration: underline;
     width: 100%;
 }
 
@@ -107,7 +127,7 @@ nav ul li a:hover {
     color: #ffffff;
 }
 
-/* Main Content Layout */
+/* Main content layout */
 #main-content {
     scroll-margin-top: 6rem;
 }
@@ -116,32 +136,33 @@ main {
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 0;
     background-color: #fff;
     box-shadow: var(--box-shadow);
     padding-top: 60px;
 }
 
+/* Header image styles */
 .header-image {
     display: block;
     margin: 0 auto;
     max-width: 100%;
     height: auto;
 }
-/* Content wrapper for main content and sidebar */
+
+/* Content wrapper layout */
 .content-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
+/* Main content column */
 .main-content {
     flex: 1;
     margin-right: 20px;
 }
 
-.sidebar { width: 300px; }
-
+/* Intro text styles */
 .intro-text {
     font-size: 1.1em;
     line-height: 1.6;
@@ -149,38 +170,43 @@ main {
     font-weight: bold;
 }
 
-/* Info Boxes and Courses */
+/* Sidebar column */
+.sidebar { 
+    width: 300px; 
+}
+
+/* Info boxes and course styles */
 .info-box, .course {
-    background-color: #bce0ef;
+    background-color: var(--light-blue);
     border: 1px solid var(--border-color);
     border-radius: 5px;
     padding: 15px;
     margin-bottom: 20px;
-}
-
-.info-box {
     box-shadow: var(--box-shadow);
 }
 
-.info-box h2, .info-box h3 {
+/* Info box header styles */
+.info-box h2, 
+.info-box h3 {
     margin-top: 0;
     font-size: 1.2em;
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 10px;
 }
 
+/* Info box list styles */
 .info-box ul {
     list-style-type: none;
     padding: 0;
 }
 
-.info-box li, .course p {
+.info-box li, 
+.course p {
     margin-bottom: 10px;
     font-size: 1rem;
-    color: var(--secondary-color);
 }
 
-/* Course Link Styles */
+/* Course link hover effects */
 .course a {
     color: inherit;
     text-decoration: none;
@@ -195,7 +221,7 @@ main {
     bottom: -10px;
     left: 50%;
     background-color: var(--primary-color);
-    transition: all 0.3s ease;
+    transition: all var(--transition-base);
     transform: translateX(-50%);
 }
 
@@ -207,8 +233,7 @@ main {
     color: var(--primary-color);
 }
 
-
-/* Dropdown Sections */
+/* Dropdown section styles */
 .dropdown-sections {
     margin-top: 30px;
     display: flex;
@@ -221,30 +246,34 @@ main {
     min-width: 250px;
 }
 
-.dropdown-sections details, .semester-dropdown {
+/* Dropdown details styles */
+.dropdown-sections details, 
+.semester-dropdown {
     border-radius: 5px;
     margin-bottom: 10px;
-    transition: all 0.3s ease;
+    transition: all var(--transition-base);
 }
 
 .dropdown-sections details {
-    background-color:#d1dadc;
+    background-color: var(--header-bg);
     border: .5px solid var(--border-color);
 }
 
-.dropdown-sections summary, .semester-dropdown summary {
+/* Dropdown summary styles */
+.dropdown-sections summary, 
+.semester-dropdown summary {
     padding: 15px;
     cursor: pointer;
     font-weight: bold;
     font-size: 1.1rem;
-    font-weight: 500;
     color: var(--primary-color);
-    background-color: #d1dadc;
+    background-color: var(--header-bg);
 }
 
-.dropdown-sections summary:hover, .semester-dropdown summary:hover {
+/* Dropdown hover effects */
+.dropdown-sections summary:hover, 
+.semester-dropdown summary:hover {
     background-color: var(--hover-bg);
-    
 }
 
 
@@ -343,19 +372,17 @@ main {
     background-image: url('./MODI.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
 }
 
+/* Landing page overlay */
 .landing-page::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background: rgba(0, 0, 0, 0.5);
 }
 
+/* Landing page content */
 .landing-content {
     position: relative;
     z-index: 1;
@@ -363,6 +390,7 @@ main {
     padding: 2rem;
 }
 
+/* Landing page elements */
 .landing-logo {
     max-width: 200px;
     margin-bottom: 2rem;
@@ -371,12 +399,12 @@ main {
 .landing-title {
     font-size: 4rem;
     margin-bottom: 1rem;
-    color: #ffffff;
+    color: white;
 }
 
 .landing-subtitle {
     font-size: 1.5rem;
-    color: #ffffff;
+    color: white;
     margin-bottom: 3rem;
 }
 
@@ -391,19 +419,19 @@ main {
 }
 
 .scroll-indicator p {
-    color: #ffffff;
+    color: white;
     margin-bottom: 0.5rem;
 }
 
 .arrow {
     width: 20px;
     height: 20px;
-    border-right: 3px solid #ffffff;
-    border-bottom: 3px solid #ffffff;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
     transform: rotate(45deg);
     margin: 0 auto;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform var(--transition-base);
 }
 
 .arrow:hover {
@@ -423,11 +451,11 @@ main {
 }
 
 .method-card {
-    background-color: #052351e2;
-    padding: 1.5rem;
+    background-color: var(--card-bg);
+    padding: var(--card-padding);
     border-radius: 3px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform var(--transition-base);
     border-bottom: 3px solid var(--primary-color);
 }
 
@@ -445,7 +473,7 @@ main {
 .study-hours {
     margin-top: 2rem;
     padding: 1rem;
-    background-color: #d1dadc;
+    background-color: var(--header-bg);
     border-left: 4px solid var(--primary-color);
     border-radius: 0 4px 4px 0;
     font-size: 1.2rem;
@@ -479,10 +507,10 @@ main {
 }
 
 .info-card {
-    background-color: #bce0ef;
-    padding: 1.5rem;
+    background-color: var(--light-blue);
+    padding: var(--card-padding);
     border-radius: 3px;
-    transition: transform 0.3s ease;
+    transition: transform var(--transition-base);
     border-bottom: 3px solid var(--primary-color);
 }
 
@@ -520,17 +548,7 @@ main {
 .program-links {
     margin-top: 3rem;
 }
-.program-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-    text-decoration: none;
-    color: inherit;
-    
-}
+
 
 .program-card:hover {
     transform: translateY(-3px);
@@ -544,20 +562,14 @@ main {
     color: var(--primary-color);
 }
 
-.program-details {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    font-size: 1rem;
-    color: var(--text-color);
-}
+
 
 .arrow-right {
     font-size: 1.5rem;
     width: 20px;
     height: 20px;
-    border-right: 3px solid #000000;
-    border-bottom: 3px solid #000000;
+    border-right: 3px solid #ffffff;
+    border-bottom: 3px solid #ffffff;
     transform: rotate(-45deg);
     margin-left: auto;      /* This will push it to the right */
     margin-right: 20px;
@@ -685,11 +697,9 @@ main {
     
 }
 
-
-
 /* Footer Styles */
 .main-footer {
-    background-color: #052351e9;
+    background-color: var(--nav-bg);
     color: white;
     padding: 2rem 0;
     margin-top: 4rem;
@@ -701,15 +711,16 @@ main {
     padding: 0 2rem;
 }
 
-
-/* Footer Grid */
+/* Footer grid layout */
 .footer-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
-.footer-info h3, .footer-info h4 {
+/* Footer typography */
+.footer-info h3, 
+.footer-info h4 {
     color: white;
     margin: 0;
 }
@@ -729,6 +740,7 @@ main {
     font-size: 0.9rem;
 }
 
+/* Footer Links */
 .footer-links ul {
     list-style: none;
     padding: 0;
@@ -739,18 +751,22 @@ main {
     margin-bottom: 0.5rem;
 }
 
-.footer-links a, .social-link, .footer-info a {
+.footer-links a, 
+.social-link, 
+.footer-info a {
     color: white;
     text-decoration: none;
     font-size: 0.9rem;
-    transition: opacity 0.3s ease;
+    transition: opacity var(--transition-base);
     position: relative;
     padding-bottom: 3px;
     width: fit-content;
     display: inline-block;
 }
 
-.footer-links a::after, .social-link::after, .footer-info a::after{
+.footer-links a::after, 
+.social-link::after, 
+.footer-info a::after {
     content: '';
     position: absolute;
     width: 0;
@@ -759,11 +775,12 @@ main {
     left: 50%;
     background-color: white;
     transform: translateX(-50%);
-    transition: width 0.3s ease;
+    transition: width var(--transition-base);
 }
 
-/* Hover effect */
-.footer-links a:hover::after, .social-link:hover::after, .footer-info a:hover::after {
+.footer-links a:hover::after, 
+.social-link:hover::after, 
+.footer-info a:hover::after {
     width: 100%;
 }
 
@@ -773,164 +790,119 @@ main {
     gap: 0.5rem;
 }
 
-
-
-
 /* Media Queries */
 @media screen and (max-width: 1024px) {
-    /* Layout adjustments */
-    .content-wrapper, .full-width-sectn { 
+    /* Layout */
+    .content-wrapper, 
+    .full-width-sectn { 
         flex-direction: column; 
     }
     
     .main-content { 
         margin-right: 0; 
-        margin-bottom: 20px; 
+        margin-bottom: var(--space-lg); 
     }
     
     .sidebar { 
         width: 100%; 
     }
     
-    /* Course grid adjustments */
+    /* Grids */
+    .methods-grid,
+    .info-cards,
     .dropdown-content .course {
-        flex: 0 0 calc(33.333% - 13.333px);
-        max-width: calc(33.333% - 13.333px);
-    }
-    
-    /* Methods grid adjustments */
-    .methods-grid .info-cards {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        gap: var(--space-md);
     }
 }
 
 @media screen and (max-width: 768px) {
-    /* Navigation adjustments */
+    /* Typography */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    
+    .landing-title { font-size: 3rem; }
+    .landing-subtitle { font-size: 1.2rem; }
+    
+    /* Navigation */
     nav ul {
         flex-direction: column;
         align-items: center;
     }
     
     nav ul li { 
-        margin: 0.25rem 0; 
+        margin: var(--space-xs) 0; 
     }
     
-    /* Main layout adjustments */
+    /* Layout */
     main { 
-        padding: 1rem; 
+        padding: var(--space-md);
     }
     
-    /* Course grid adjustments */
-    .course, .dropdown-content .course {
-        flex: 0 0 calc(50% - 10px);
-        max-width: calc(50% - 10px);
-    }
-    
-    /* Landing page adjustments */
-    .landing-title { 
-        font-size: 3rem; 
-    }
-    
-    .landing-subtitle { 
-        font-size: 1.2rem; 
-    }
-    
-    /* Grid and card adjustments */
-    .methods-grid,
-    .info-cards {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    /* Card styles */
-    .method-card,
-    .info-card {
-        padding: 1.2rem;
-    }
-    
-    .method-card h3 { 
-        font-size: 1.2rem; 
-    }
-    
-    /* Text size adjustments */
-    .study-hours,
-    .teaching-methods p,
-    .main-description,
-    .section-text {
-        font-size: 1.1rem;
-    }
-    
-    /* Section padding and margins */
-    .teaching-methods p,
+    /* Grids */
     .methods-grid,
     .info-cards,
-    .main-description,
-    .study-options,
-    .additional-info {
-        padding: 0 1rem;
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
     }
     
-    /* Section headers */
-    .section-header {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.5rem;
-    }
-    
-    /* Card layout adjustments */
+    /* Cards */
+    .method-card,
+    .info-card,
     .link-card, 
     .contact-card, 
     .program-card, 
     .location-card {
+        padding: var(--mobile-padding);
         margin-left: 0;
-        padding: 1.2rem;
         flex-direction: column;
         text-align: center;
-        gap: 1rem;
+        gap: var(--space-md);
+    }
+
+    /* Footer */
+    .social-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--space-md);
     }
     
     .arrow-right {
-        margin: 0.5rem auto 0;
+        margin: var(--space-sm) auto 0;
     }
     
     .program-details {
         justify-content: center;
     }
-    
-    /* Footer adjustments */
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .social-links {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-    }
 }
 
 @media screen and (max-width: 480px) {
-    /* Text size adjustments */
+    /* Typography */
     .teaching-methods p,
     .main-description,
     .section-text {
-        font-size: 1rem;
+        font-size: var(--font-sm);
     }
     
     .info-section h2 {
         font-size: 1.3rem;
     }
     
-    /* Card padding adjustments */
+    /* Layout */
+    .container {
+        padding: 0 var(--space-md);
+    }
+    
+    /* Cards */
     .method-card,
     .info-card,
     .link-card,
     .contact-card,
     .program-card,
     .location-card {
-        padding: 1rem;
+        padding: var(--space-md);
     }
 }
