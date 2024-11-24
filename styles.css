@@ -38,6 +38,7 @@ body {
     margin: 0;
     background-color: var(--bg-color);
     color: var(--text-color);
+    
 }
 
 /* Default heading styles */
@@ -141,9 +142,9 @@ nav ul li a:hover {
 
 main {
     padding: 2rem;
-    max-width: 1200px;
+    max-width: 80%;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #ffffff;
     box-shadow: var(--box-shadow);
     padding-top: 60px;
 }
@@ -926,9 +927,6 @@ main {
 
 
 /*************Animal Sections Styles *************/
-
-
-
 
 .animal-sections {
     padding-top: 60px;
