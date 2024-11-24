@@ -7,7 +7,7 @@
     --border-color: #eeeeee;
     --hover-bg: #a4a4a4;
     --box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    --nav-bg: #052351e9;
+    --nav-bg: #052351e8;
     --card-bg: #052351e2;
     --light-blue: #bce0ef;
     --transition-base: 0.3s ease;
@@ -18,6 +18,13 @@
     --space-md: 10px;
     --space-sm: 5px;
     --font-sm: 0.9rem;
+
+/* Activity page */
+
+    --animal-txt-bg: #1a2f38; 
+    --animal-txt-color: #ffffff; 
+    --animal-link-color: #64dfdf;
+    --animal-heading-color: #80ffdb; 
 }
 
 /* Basic reset for all elements */
@@ -361,7 +368,7 @@ main {
 .year-dropdown h3 { margin-top: 0; }
 
 
-/* Landing page styles */
+/* Landing page container */
 .landing-page {
     height: 100vh;
     width: 100%;
@@ -369,31 +376,37 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('./MODI.jpg');
-    background-size: cover;
-    background-position: center;
 }
 
-/* Landing page overlay */
-.landing-page::before {
+/* Background image container */
+.landing-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+/* Background image */
+.landing-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dark overlay */
+.landing-bg::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
 }
 
-/* Landing page content */
+/* Content container */
 .landing-content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     text-align: center;
     padding: 2rem;
-}
-
-/* Landing page elements */
-.landing-logo {
-    max-width: 200px;
-    margin-bottom: 2rem;
 }
 
 .landing-title {
@@ -411,18 +424,14 @@ main {
 /* Scroll Indicator */
 .scroll-indicator {
     position: absolute;
-    bottom: -4rem;
+    bottom:-4rem;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
     z-index: 1;
 }
 
-.scroll-indicator p {
-    color: white;
-    margin-bottom: 0.5rem;
-}
-
+/* Arrow */
 .arrow {
     width: 20px;
     height: 20px;
@@ -437,8 +446,8 @@ main {
 .arrow:hover {
     transform: translateY(10px) rotate(45deg);
 }
-/* Teaching Methods Section */
 
+/* Teaching Methods Section */
 .teaching-methods p {
     font-size: 1.2rem;
 }
@@ -827,12 +836,13 @@ main {
     
     /* Navigation */
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
+        gap: 0.3rem;
     }
     
     nav ul li { 
-        margin: var(--space-xs) 0; 
+        font-size: 1rem; /* Smaller font size */
+        padding: 0.3rem 0.6rem; /* Smaller padding */
     }
     
     /* Layout */
@@ -877,14 +887,20 @@ main {
     .program-details {
         justify-content: center;
     }
+    #main-content {
+        scroll-margin-top: 11rem;
+    }
 }
 
 @media screen and (max-width: 480px) {
-    /* Typography */
     .teaching-methods p,
     .main-description,
     .section-text {
         font-size: var(--font-sm);
+    }
+
+    nav ul {
+        justify-content: center;
     }
     
     .info-section h2 {
@@ -904,5 +920,243 @@ main {
     .program-card,
     .location-card {
         padding: var(--space-md);
+    }
+}
+
+
+
+/*************Animal Sections Styles *************/
+
+
+
+
+.animal-sections {
+    padding-top: 60px;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+}
+
+.animal-section {
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    scroll-margin-top: 6rem; /* Adjust  value to match  nav height */
+}
+
+
+
+/* Alternating layout for even sections */
+.animal-section:nth-child(even) {
+    grid-template-columns: 2fr 1fr;
+}
+
+.animal-text-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+    background-color: var(--animal-txt-bg);
+    color: var(--animal-txt-color);
+    min-height: 100vh;
+}
+
+.animal-text-side h2 {
+    color: var(--animal-heading-color);
+}
+
+.animal-text-side a {
+    color: var(--animal-link-color);
+}
+
+.animal-image-side {
+    position: relative;
+    min-height: 100vh;
+}
+
+.animal-image-side img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Scroll Indicator */
+.scroll-indicator-a{
+    position: absolute;
+    bottom:8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1;
+}
+
+
+.arrow-a{
+    width: 40px;
+    height: 40px;
+    border-right: 8px solid #ffffff;
+    border-bottom: 8px solid #ffffff;
+    transform: rotate(45deg);
+    margin: 0 auto;
+    cursor: pointer;
+    transition: transform var(--transition-base);
+    filter: drop-shadow(0 0 2px #ffffff);
+
+}
+
+.arrow-a:hover {
+    transform: translateY(10px) rotate(45deg);
+}
+
+/* Animal Navigation */	
+.animal-links {
+    display: grid;
+    grid-template-columns: repeat(3, 450px);
+    gap: 1.5rem;
+    padding: 1rem 0;
+    justify-content: center;
+}
+
+.animal-card-simple {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.animal-card-simple:hover {
+    transform: translateY(-5px);
+}
+
+.animal-card-simple img {
+    width: 450px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.info-animal-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 2rem 0;
+    width: 100%;
+    background-color: var(--animal-txt-bg);
+    scroll-margin-top: 6rem;
+}
+
+.info-animal-section h2 {
+    color: var(--animal-heading-color);
+    text-align: center;
+    margin-bottom: 5rem;
+    
+}
+
+/* Existing styles remain the same until media queries */
+
+/* Media query for tablets and smaller screens */
+@media (max-width: 1024px) {
+    .animal-links {
+        grid-template-columns: repeat(3, 230px); 
+        gap: 1.5rem;
+    }
+
+    .animal-card-simple img {
+        width: 230px;
+        height: 230px;
+    }
+
+    .animal-text-side {
+        padding: 2rem;
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    /* Animal sections */
+    .animal-section,
+    .animal-section:nth-child(even) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        
+        
+    }
+    .animal-section{    
+        display: flex;
+        flex-direction: column;
+        scroll-margin-top: 5rem;
+
+    }
+    
+   /* Image and text heights */
+    .animal-image-side {
+        min-height: 70vh;
+        order: 2;
+    }
+
+    .animal-text-side {
+        min-height: 30vh;   
+        padding: 2rem 1.5rem;
+        order: 1;
+    }
+
+    .animal-text-side h2 { font-size: 1.8rem; }
+    .animal-text-side p { font-size: 1rem; }
+
+
+    /* Navigation grid */
+    .animal-links {
+        grid-template-columns: repeat(2, 220px); /* 2 columns for larger phones */
+    }
+
+    .animal-card-simple img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .scroll-indicator-a {
+        bottom: 9rem;
+    }
+}
+
+/* Media query for small mobile devices */
+@media (max-width: 480px) {
+
+    .animal-links {
+        grid-template-columns: repeat(2, 150px); /* Single column for small phones */
+    }
+
+    .animal-card-simple img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .animal-text-side {
+        padding: 1.5rem 1rem;
+    }
+
+    
+    .animal-text-side h2 { font-size: 1.5rem; }
+    .info-animal-section h2 { margin-bottom: 2rem; }
+
+    .info-animal-section{
+        scroll-margin-top: 8rem;
+    }
+    
+    .animal-section{
+        scroll-margin-top: 10rem;
+    }
+
+    .scroll-indicator-a {
+        bottom: 14rem;
     }
 }
