@@ -29,7 +29,15 @@
 
 /* Basic reset for all elements */
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { 
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+
+}
+
+section{
+    scroll-snap-align: start;
+}
 
 /* Base styles for the body */
 body {
@@ -86,7 +94,7 @@ header {
     backdrop-filter: blur(5px);
     box-shadow: var(--box-shadow);
     padding: 0.5rem;
-    z-index: 2;
+    z-index: 3;
 }
 
 /* Navigation menu layout */
@@ -138,15 +146,15 @@ nav ul li a:hover {
 /* Main content layout */
 #main-content {
     scroll-margin-top: 6rem;
+    max-width: 80%;
+    padding: 2rem;
 }
 
 main {
-    padding: 2rem;
-    max-width: 80%;
+    padding: 0;
     margin: 0 auto;
     background-color: #ffffff;
-    box-shadow: var(--box-shadow);
-    padding-top: 60px;
+    
 }
 
 /* Header image styles */
@@ -846,10 +854,7 @@ main {
         padding: 0.3rem 0.6rem; /* Smaller padding */
     }
     
-    /* Layout */
-    main { 
-        padding: var(--space-md);
-    }
+    
     
     /* Grids */
     .methods-grid,
@@ -945,10 +950,8 @@ main {
     margin: 0;
     padding: 0;
     width: 100%;
-    scroll-margin-top: 6rem; /* Adjust  value to match  nav height */
+    scroll-margin-top: 6rem; 
 }
-
-
 
 /* Alternating layout for even sections */
 .animal-section:nth-child(even) {
@@ -1156,5 +1159,175 @@ main {
 
     .scroll-indicator-a {
         bottom: 14rem;
+    }
+}
+
+/************* GitHub page************ */
+
+
+.landing-bg-git {
+    position: absolute;
+    inset: 0;
+    background: #2c3e50;
+}
+.github-grid {
+    max-width: 100%;
+    scroll-margin-top: 6rem;
+}
+
+/* Section Grid */
+.section-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    min-height: 100vh;
+    scroll-margin-top: 6rem;
+}
+
+
+
+/* Even Section Styles */
+.section-grid:nth-child(even) {
+    grid-template-columns: 2fr 1fr;
+}
+.section-grid:nth-child(even) .text-side {
+    background-color: rgb(80, 127, 160);
+}
+.section-grid:nth-child(even) .image-side {
+    background-color: rgb(4, 28, 53);
+}
+/* Text Sides */
+.text-side {
+    background-color: var(--light-blue);
+    color: rgb(0, 0, 0);
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* Headings */
+.text-side h1,
+.text-side h2 {
+    color: var(--primary-color);
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    margin: 0;
+}
+
+.text-side h1 { font-size: 3.5rem; }
+.text-side h2 { font-size: 2.8rem; }
+
+/* Paragraphs */
+.text-side p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 600px;
+    opacity: 0.9;
+}
+
+/* Feature List */
+.github-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.github-list li {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    padding: 0.8rem 0;
+    padding-left: 2rem;
+    position: relative;
+    opacity: 0.9;
+}
+
+.github-list li::before {
+    content: ".";
+    position: absolute;
+    left: 0;
+    color: var(--animal-heading-color);
+    font-weight: bold;
+}
+
+/* Image Sides */
+.image-side {
+    background-color: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.image-side img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+/* Media Query */
+@media (max-width: 768px) {
+
+    .github-grid{
+        max-width: 100%;
+       
+    }
+    .section-grid, .section-grid:nth-child(even) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+      
+    }
+
+    .section-grid{
+        display: flex;
+        flex-direction: column;
+        scroll-margin-top: 5rem;
+    }
+
+    
+   /* Image and text heights */
+    .animal-image-side {
+        min-height: 70vh;
+        order: 2;
+    }
+
+    .animal-text-side {
+        min-height: 30vh;   
+        padding: 2rem 1.5rem;
+        order: 1;
+    }
+
+
+    .text-side,
+    .image-side {
+        padding: 2rem;
+    }
+    .image-side {
+        order: 2;
+        min-height: 50vh;
+    }
+    .text-side {
+        padding: 3rem;
+        order: 1;
+        min-height: 50vh;
+    }
+
+    .text-side h1 {
+        font-size: 3rem;
+    }
+
+    .text-side h2 {
+        font-size: 2.4rem;
+    }
+
+    .text-side p,
+    .github-list li {
+        font-size: 1.1rem;
     }
 }
