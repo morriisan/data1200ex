@@ -1542,7 +1542,7 @@ Hover and open state styling */
     font-size: 1.2rem;
     line-height: 2;
     margin-bottom: 1.5rem;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 /* Image Content */
@@ -1619,8 +1619,7 @@ Hover and open state styling */
     }
 }
 
-/* Footer Component - Version 2
--------------------------------------------------- */
+
 /* Simple Footer Component
 -------------------------------------------------- */
 .main-footer-2 {
