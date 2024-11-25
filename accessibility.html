@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Report</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" alt="Home page button ">Home</a></li>
+                <li><a href="accessibility.html" alt="Accessibility page button">Accessibility</a></li>
+                <li><a href="github.html" alt="GitHub page button">GitHub</a></li>
+                <li><a href="activity.html" alt="Activity page button">Activity</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="accessibility-main">
+        <section class="intro">
+            <div class="container">
+                <h1>Accessibility Report</h1>
+                <div class="intro-content">
+                    <p>Our commitment to creating an accessible and inclusive web experience.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="report-section">
+            <div class="text-content">
+                <h2>WAVE Testing Results Part1</h2>
+                <p>We tested the "Home" page and the "Activity" page. We encountered no errors on either of them except for empty link errors, 
+                    which we got on both, but that was expected since we use empty links to navigate around on those pages.</p>
+            </div>
+            <div class="image-content">
+                <img src="./test/wave_activity_test1.png" alt="WAVE test of activity page, showing no errors">
+                <img src="./test/wave_index_test1.png" alt="WAVE test of home page, showing no errors">
+            </div>
+        </section>
+
+        <section class="report-section">
+            <div class="text-content">
+                <h2>WAVE Testing Results Part2</h2>
+                <p>Here we tested the "GitHub" page. We got contrast errors on the page, The heading color was a bit to close to the background color. But as you can
+                    see we fixed it on the second screenshot. And the only error left is the same as previous part, empty links.
+                </p>
+            </div>
+            <div class="image-content">
+                <img src="./test/wave_git_test1.png" alt="WAVE test of github page, showing contrast errors">
+                <img src="./test/wave_git_test2.png" alt="WAVE test of github page, showing contrast errors">
+            </div>
+        </section>
+
+        <section class="report-section">
+            <div class="text-content">
+                <h2>W3.org HTML Markup Checker</h2>
+                <p>This test is form <a href="https://validator.w3.org/#validate_by_upload">W3.org</a> a html markup checker. This test i
+                for the "GitHub" page, as you see in the first picture it found a error in one of the h1 tages. The tas opend with a h2 but closed with a 
+                h1 tag. The second picture shows that there ar no more errors after we fixed that issue.</p>
+                <p>The other tow page, "Home" and "Activity" page did not have any errors</p>
+                
+            </div>
+            <div class="image-content">
+                <img src="./test/test1_w3_git.png" alt="Color contrast analysis results">
+                <img src="./test/test2_w3_git.png" alt="Color contrast analysis results">
+            </div>
+        </section>
+
+        <section class="report-section">
+            <div class="text-content">
+                <h2>Lighthouse </h2>
+                <p>The las tool we used was Lighthouse, since Lighthouse was the last tool we used many of the kinks form the other test where allready fixed.
+                    Yes on the activity page the performance is low, but since we use big high quality images the loading time is longer. But the accesibility
+                    score is 90+ on all three pages.
+                </p>
+                
+            </div>
+            <div class="image-content">
+                <img src="./test/test1_light_activity.png" alt="Color contrast analysis results">
+                <img src="./test/test1_light_home.png" alt="Color contrast analysis results">
+                <img src="./test/test1_light_git.png" alt="Color contrast analysis results">
+                
+            </div>
+        </section>
+
+        <section class="report-section">
+
+
+            <div class="text-content">
+                <h2>Lighthouse </h2>
+                <p>As a group, we focused on universal design principles to create an accessible and user-friendly website. We used semantic HTML5 elements, such as <strong>nav</strong>, <strong>main</strong>, <strong>section</strong>, <strong>header</strong>, and <strong>footer</strong>, to provide a clear structure that benefits screen readers and enhances the website’s usability. To ensure logical organization, 
+                    we collaboratively maintained a proper heading hierarchy (h1-h4), making the content easy to navigate for all users.
+                </p>
+                <p>
+                    We implemented <strong></strong>details</strong> and <strong>summary</strong> elements for expandable content sections, allowing users to reveal information 
+                    as needed without overwhelming the page layout. Our navigation menu is consistent across all pages, with descriptive link text that avoids generic terms like "click here," ensuring clarity and accessibility. External links open in new tabs (target="_blank) with clear descriptions, 
+                    helping users understand the context of their actions.
+                </p>
+                <p>For visual design, we worked together to maintain high contrast ratios, ensuring readability for users with visual impairments. We also used CSS variables to standardize styles and make the design easier to maintain. To improve accessibility on all devices, we implemented responsive design techniques,
+                    ensuring the site adapts to various screen sizes. Interactive elements include hover states, providing visual feedback that enhances usability.</p>
+
+                <p>Regarding images and media, we ensured all images included descriptive alt text or empty alt attributes for decorative elements, supporting screen reader accessibility. Images were optimized to scale properly and maintain their aspect ratios to prevent distortion across devices. These collaborative coding choices reflect our shared commitment to 
+                    creating an inclusive, functional, and aesthetically pleasing website for diverse users.
+                </p>
+            </div>
+           
+           
+        </section
+    </main>
+</body>
+</html>
