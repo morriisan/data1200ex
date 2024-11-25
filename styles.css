@@ -1488,7 +1488,7 @@ Hover and open state styling */
     gap: 4rem;
     padding: 4rem 2rem;
     align-items: center;
-    background-color: #e0f2f4;
+    background-color: #d6eef0;
 }
 /* Alternating Background */
 .report-section:nth-child(odd) {
@@ -1509,11 +1509,17 @@ Hover and open state styling */
 }
 
 /* Intro Content */
+.intro{
+    background-color: var(--light-blue);
+    padding: 2rem 0rem;
+    scroll-margin-top: 6rem;
+}
 .intro-content{
     margin: 0 auto;
     max-width: 80%;
     height: 100%;
     padding: 1rem 4rem;;
+    
 }
 
 .intro-content p{
