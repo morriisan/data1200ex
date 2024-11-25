@@ -1598,6 +1598,10 @@ Hover and open state styling */
     .image-content img {
         max-width: 100%;
     }
+    .intro-content{
+        padding: 1rem;
+        max-width: 100%;
+    }   
     
 }
 /* Small Mobile (480px) */
