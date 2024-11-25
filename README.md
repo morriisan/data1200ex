@@ -1,4 +1,2 @@
-# data1200
 
-halla bagera
-too much work
+God jul og godt nytt år!

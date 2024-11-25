@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+        <!-- Navigation Header -->
+
     <header>
         <nav>
             <ul>
@@ -18,28 +20,34 @@
         </nav>
     </header>
 
+    <!-- Main Content Area -->
     <main class="accessibility-main">
+        <!-- Introduction Section -->
         <section class="intro">
             <div class="container">
                 <h1>Accessibility Report</h1>
                 <div class="intro-content">
-                    <p>Our commitment to creating an accessible and inclusive web experience.</p>
+                    <p>Accessibility in web design ensures that websites are usable by everyone, including people with disabilities. It promotes inclusivity, improves user experience, and expands the audience by removing barriers to access. By following accessibility principles, we create digital spaces that are not only equitable but also more functional and user-friendly for all.</p>
                 </div>
             </div>
         </section>
 
+        <!-- WAVE Testing Section Part 1 -->
         <section class="report-section">
             <div class="text-content">
+                <!-- WAVE Testing Section Part 1 -->
                 <h2>WAVE Testing Results Part1</h2>
                 <p>We tested the "Home" page and the "Activity" page. We encountered no errors on either of them except for empty link errors, 
                     which we got on both, but that was expected since we use empty links to navigate around on those pages.</p>
             </div>
+            <!-- Test result screenshot -->
             <div class="image-content">
                 <img src="./test/wave_activity_test1.png" alt="WAVE test of activity page, showing no errors">
                 <img src="./test/wave_index_test1.png" alt="WAVE test of home page, showing no errors">
             </div>
         </section>
 
+        <!-- WAVE Testing Section Part 2 -->
         <section class="report-section">
             <div class="text-content">
                 <h2>WAVE Testing Results Part2</h2>
@@ -47,36 +55,40 @@
                     see we fixed it on the second screenshot. And the only error left is the same as previous part, empty links.
                 </p>
             </div>
+            <!-- Test result screenshot -->
             <div class="image-content">
                 <img src="./test/wave_git_test1.png" alt="WAVE test of github page, showing contrast errors">
                 <img src="./test/wave_git_test2.png" alt="WAVE test of github page, showing contrast errors">
             </div>
         </section>
 
+        <!-- W3.org HTML Markup Checker Section --> 
         <section class="report-section">
             <div class="text-content">
                 <h2>W3.org HTML Markup Checker</h2>
                 <p>This test is form <a href="https://validator.w3.org/#validate_by_upload">W3.org</a> a html markup checker. This test i
-                for the "GitHub" page, as you see in the first picture it found a error in one of the h1 tages. The tas opend with a h2 but closed with a 
+                for the "GitHub" page, as you see in the first picture it found a error in one of the h1 tages. The tas opened with a h2 but closed with a 
                 h1 tag. The second picture shows that there ar no more errors after we fixed that issue.</p>
                 <p>The other tow page, "Home" and "Activity" page did not have any errors</p>
-                
-            </div>
+            </div>  
+            <!-- Test result screenshot -->
             <div class="image-content">
                 <img src="./test/test1_w3_git.png" alt="Color contrast analysis results">
                 <img src="./test/test2_w3_git.png" alt="Color contrast analysis results">
             </div>
         </section>
 
+        <!-- Lighthouse Section -->
         <section class="report-section">
             <div class="text-content">
                 <h2>Lighthouse </h2>
-                <p>The las tool we used was Lighthouse, since Lighthouse was the last tool we used many of the kinks form the other test where allready fixed.
-                    Yes on the activity page the performance is low, but since we use big high quality images the loading time is longer. But the accesibility
+                <p>The last tool we used was Lighthouse, since Lighthouse was the last tool we used many of the kinks form the other test where already fixed.
+                    Yes on the activity page the performance is low, but since we use big high quality images the loading time is longer. But the accessibility
                     score is 90+ on all three pages.
                 </p>
                 
             </div>
+            <!-- Test result screenshot -->
             <div class="image-content">
                 <img src="./test/test1_light_activity.png" alt="Color contrast analysis results">
                 <img src="./test/test1_light_home.png" alt="Color contrast analysis results">
@@ -85,8 +97,8 @@
             </div>
         </section>
 
+        <!-- Accessibility Report Section -->
         <section class="report-section">
-
 
             <div class="text-content">
                 <h2>Lighthouse </h2>
@@ -94,7 +106,7 @@
                     we collaboratively maintained a proper heading hierarchy (h1-h4), making the content easy to navigate for all users.
                 </p>
                 <p>
-                    We implemented <strong></strong>details</strong> and <strong>summary</strong> elements for expandable content sections, allowing users to reveal information 
+                    We implemented <strong>details</strong> and <strong>summary</strong> elements for expandable content sections, allowing users to reveal information 
                     as needed without overwhelming the page layout. Our navigation menu is consistent across all pages, with descriptive link text that avoids generic terms like "click here," ensuring clarity and accessibility. External links open in new tabs (target="_blank) with clear descriptions, 
                     helping users understand the context of their actions.
                 </p>
@@ -105,9 +117,21 @@
                     creating an inclusive, functional, and aesthetically pleasing website for diverse users.
                 </p>
             </div>
-           
-           
-        </section
+        </section>
     </main>
+    <!-- Main Footer Content -->    
+    <footer class="main-footer-2">
+        <div class="footer-r">
+            
+            <!-- Main Footer Content -->
+            <div class="footer-grid-r">
+                <!-- Contact Info -->
+                <div class="footer-info-r">
+                    <h4>BROKE 4 LIFE  UNIVERSITY</h4>
+                    <h3>STORBYUNIVERSITETET</h3>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
